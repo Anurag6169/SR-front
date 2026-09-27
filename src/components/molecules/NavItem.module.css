@@ -1,0 +1,113 @@
+.item {
+  position: relative;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.6rem 0.2rem;
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--blush-400);
+  border-radius: 2px;
+  transition: width 0.22s ease;
+}
+
+.link:hover {
+  color: var(--blush-400);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  color: var(--ink-soft);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: var(--blush-400);
+}
+
+/* Mega dropdown */
+.megaPanel {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translate(-50%, 8px);
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-dropdown);
+  padding: 1.6rem;
+  min-width: 480px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 40;
+  border: 1px solid var(--blush-50);
+}
+
+.megaPanelOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.megaInner {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.megaColumn {
+  min-width: 150px;
+}
+
+.megaHeading {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.megaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.megaLink {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+.megaLink:hover {
+  color: var(--blush-400);
+  padding-left: 3px;
+}

@@ -1,0 +1,39 @@
+/* =========================================================
+   Bakery Design Tokens
+   Drop this at your app root (imported once in index.css / App.jsx)
+   ========================================================= */
+:root {
+  /* Brand palette (blush spectrum) */
+  --blush-50: #fde4f2;
+  --blush-100: #f9cee7;
+  --blush-200: #f4b8da;
+  --blush-300: #eea1cd;
+  --blush-400: #e68bbe;
+
+  /* Supporting neutrals — kept warm, not stark, for a premium bakery feel */
+  --ink: #3a2c33;          /* primary text — soft aubergine-black, not pure black */
+  --ink-soft: #6e5a63;     /* secondary text */
+  --cream: #fffaf9;        /* page/nav background */
+  --cream-shadow: rgba(58, 44, 51, 0.08);
+  --gold: #c99a4a;         /* small premium accent for dividers/icons on hover */
+
+  /* Derived gradients */
+  --gradient-cta: linear-gradient(135deg, var(--blush-300) 0%, var(--blush-400) 100%);
+  --gradient-cta-hover: linear-gradient(135deg, var(--blush-400) 0%, #d976ae 100%);
+
+  /* Elevation */
+  --shadow-nav: 0 4px 24px rgba(230, 139, 190, 0.14);
+  --shadow-dropdown: 0 12px 32px rgba(58, 44, 51, 0.12);
+
+  /* Radii & spacing rhythm */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+
+  /* Type */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', 'Segoe UI', sans-serif;
+
+  --nav-height: 84px;
+  --nav-height-scrolled: 68px;
+}
